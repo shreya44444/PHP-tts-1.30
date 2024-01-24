@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .green {
+            background-color: greenyellow;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="row g-3 m-4">
+        <div class="col-auto">
+            <h2 class="text-info">Your Name</h2>
+        </div>
+        <div class="col-auto">
+            <!-- <label for="inputPassword2" class="visually-hidden">Password</label> -->
+            <input type="text" class="form-control" id="inputName" placeholder="Name">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-success mb-3">Confirm identity</button>
+        </div>
+    </form>
+
+    <main class="container-fluid mt-4 bg-info">
+        <div class="question-1" id="div-1">
+            <ul class="list-group" id="ul-quiz">
+                <h2>1. Full form of HTML?</h2>
+                <li class="list-group-item ans-1">i.
+                    Hypertext Markup Language
+                </li>
+                <li class="list-group-item ans-2">ii.
+                    Hypertext Makeup Language
+                </li>
+                <li class="list-group-item ans-3">iii.
+                    Hypertext Mark Language
+                </li>
+                <li class="list-group-item ans-4">iv.
+                    Hypertext Make Language
+                </li>
+            </ul>
+            <button id="bttn">SLIDE UP</button>
+        </div>
+        <div class="question-1" id="div-2">
+            <ul class="list-group" id="ul-quiz-2">
+                <h2>1. New version of HTML?</h2>
+                <li class="list-group-item">
+                    i. HTML5
+                </li>
+                <li class="list-group-item">
+                    ii. HTML4
+                </li>
+                <li class="list-group-item">
+                    iii. HTML3
+                </li>
+                <li class="list-group-item">
+                    iv. HTML2
+                </li>
+            </ul>
+        </div>
+        <div class="question-1" id="div-3">
+            <ul class="list-group" id="ul-quiz-3">
+                <h2>1. Full Form of https?</h2>
+                <li class="list-group-item">
+                    i. Hypertext Transfer Protocol Secure
+                </li>
+                <li class="list-group-item">
+                    ii. Hypertext Transfer Protocol
+                </li>
+                <li class="list-group-item">
+                    iii. Hypertext Transfer Secure
+                </li>
+                <li class="list-group-item">
+                    iv. Transfer Protocol Secure
+                </li>
+            </ul>
+        </div>
+        <div class="question-1" id="div-4">
+            <ul class="list-group" id="ul-quiz-4">
+                <h2>1. Full Form of url?</h2>
+                <li class="list-group-item">
+                    i. Uniform Resource Locator
+                </li>
+                <li class="list-group-item">
+                    ii. Uniform Resource
+                </li>
+                <li class="list-group-item">
+                    iii. Uniform Locator
+                </li>
+                <li class="list-group-item">
+                    iv. Resource Locator
+                </li>
+            </ul>
+        </div>
+        <div class="question-1" id="div-5">
+            <ul class="list-group" id="ul-quiz-5">
+                <h2>1. Full Form of www?</h2>
+                <li class="list-group-item">
+                    i. World Wide Web
+                </li>
+                <li class="list-group-item">
+                    ii. World Wide
+                </li>
+                <li class="list-group-item">
+                    iii. World Web
+                </li>
+                <li class="list-group-item">
+                    iv. Wide Web
+                </li>
+            </ul>
+        </div>
+        <div class="question-1" id="div-6">
+            <ul class="list-group" id="ul-quiz-6">
+                <h2>1. Full form of CSS?</h2>
+                <li class="list-group-item">
+                    i. Cascading Style Sheets
+                </li>
+                <li class="list-group-item">
+                    ii. Cascading Style Sheet
+                </li>
+                <li class="list-group-item">
+                    iii. Cascading Sheets
+                </li>
+                <li class="list-group-item">
+                    iv. Cascading Style Shade
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            // console.log(question);
+            $("#ul-quiz li").on("click", function () {
+                let question = "list-group-item ans-1";
+                console.log(question);
+                let ans = $(this).attr("class");
+                if (ans == question) {
+                    $(this).attr("class", "green")
+                } else {
+                    $(this).attr("class", "red")
+                }
+                $("#ul-quiz li").off("click");
+                $("#bttn").on('click', function () {
+                    $("#ul-quiz li").slideUp(350)
+                })
+            })
+        })
+
+        $(document).ready(function () {
+            // console.log(question);
+            $("#ul-quiz-2 li").on("click", function () {
+                let question = "list-group-item ans-1";
+                console.log(question);
+                let ans = $(this).attr("class");
+                if (ans == question) {
+                    $(this).attr("class", "green")
+                } else {
+                    $(this).attr("class", "red")
+                }
+                $("#ul-quiz-2 li").off("click");
+            })
+        })
+        $(document).ready(function () {
+            // console.log(question);
+            $("#ul-quiz-3 li").on("click", function () {
+                let question = "list-group-item ans-1";
+                console.log(question);
+                let ans = $(this).attr("class");
+                if (ans == question) {
+                    $(this).attr("class", "green")
+                } else {
+                    $(this).attr("class", "red")
+                }
+                $("#ul-quiz-3 li").off("click");
+            })
+        })
+        $(document).ready(function () {
+            // console.log(question);
+            $("#ul-quiz-4 li").on("click", function () {
+                let question = "list-group-item ans-1";
+                console.log(question);
+                let ans = $(this).attr("class");
+                if (ans == question) {
+                    $(this).attr("class", "green")
+                } else {
+                    $(this).attr("class", "red")
+                }
+                $("#ul-quiz-4 li").off("click");
+            })
+        })
+        $(document).ready(function () {
+            // console.log(question);
+            $("#ul-quiz-5 li").on("click", function () {
+                let question = "list-group-item ans-1";
+                console.log(question);
+                let ans = $(this).attr("class");
+                if (ans == question) {
+                    $(this).attr("class", "green")
+                } else {
+                    $(this).attr("class", "red")
+                }
+                $("#ul-quiz-5 li").off("click");
+            })
+        })
+        $(document).ready(function () {
+            // console.log(question);
+            $("#ul-quiz-6 li").on("click", function () {
+                let question = "list-group-item ans-1";
+                console.log(question);
+                let ans = $(this).attr("class");
+                if (ans == question) {
+                    $(this).attr("class", "green")
+                } else {
+                    $(this).attr("class", "red")
+                }
+                $("#ul-quiz-6 li").off("click");
+            })
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>admission form</title>
+</head>
+
+<body>
+	<H1>ADMISSION FORM</H1>
+	<form action="back.php" method="post">
+
+		<label>name</label>
+		<input type="text" name="myname" placeholder="enter first name" id="fn"><br><br>
+
+		<label>DATE OF BIRTH</label>
+		<input type="date" name="dob"><br><br>
+
+		<label>EMAIL</label>
+		<input type="email" name="mail" id="mail"><BR><BR>
+
+		<label>CONTACT NO.</label>
+		<input type="text" name="no" id="NO."><BR><BR>
+
+		<label>GENDER</label>
+		<input type="radio" name="gender" value="M">MALE
+		<input type="radio" name="gender" value="F">FEMALE<br><br>
+
+		<label>RELIGION</label>
+		<select name="religion">
+			<option value="HINDUSIM">HINDUSIM</option>
+			<option value="ISLAM">ISLAM</option>
+			<option value="SIKHSIM">SIKHSIM</option>
+			<option value="CHRISTANITY">CHRISTANITY</option>
+			<option value="BUDHISM">BUDHISM</option>
+			<option value="JAINISM">JAINISM</option>
+		</select><BR><BR>
+
+		<label>CATEGORY</label>
+		<select name="category">
+			<option value="Unreserved">Unreserved</option>
+			<option value="OBC">OBC</option>
+			<option value="SC">SC</option>
+			<option value="ST">ST</option>
+		</select><BR><BR>
+
+		<labe>IDENTIITY PROOF</label>
+		<select name="id">
+			<option >Aadhar Card</option>
+			<option >Voter card</option>
+			<option >PAN Card</option>
+			<option >Passport</option>
+		</select>
+
+		<label>ID PROOF NO</label>
+		<input type="text" name="idno" id="id">
+		<HR>
+
+		<H2>RESIDINTAL ADDRESS</H2>
+
+		<label>ADDRESS 1</label>
+		<textarea row="4" column="5" name="add_1"></textarea>
+
+		<label>ADDRESS 2</label>
+		<textarea row="4" column="5" name="add_2"></textarea> <br><br>
+
+		<label>STATE</label>
+		<input type="text" name="state"> 
+
+		<label>CITY</label>
+		<input type="text" name="city" id="city">
+
+		<label>POST OFFICE</label>
+		<input type="text" name="po"><br><br>
+
+		<label>DISTRICT</label>
+		<input type="text" name="dist" id="dist">
+
+		<label>PIN CODE</label>
+		<input type="text" name="pin" id="PIN"><BR><BR>
+
+		<button type="submit">submit</button>
+	</form>
+</body>
+
+</html>
